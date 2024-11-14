@@ -2,6 +2,7 @@ package me.yic.xconomy.adapter.comp;
 
 
 import me.yic.xconomy.adapter.iSender;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -36,7 +37,7 @@ public class CSender implements iSender {
 
     @Override
     public void sendMessage(String message){
-        sender.sendMessage(message);
+        sender.sendMessage(MiniMessage.miniMessage().deserialize(message));
     }
 
     @Override

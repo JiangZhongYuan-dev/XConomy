@@ -18,6 +18,7 @@
  */
 package me.yic.xconomy;
 
+import com.saicone.ezlib.Ezlib;
 import me.yic.xconomy.adapter.comp.CConfig;
 import me.yic.xconomy.data.DataLink;
 import me.yic.xconomy.data.ImportData;
@@ -44,6 +45,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class XConomy extends JavaPlugin {
 
@@ -56,6 +59,14 @@ public class XConomy extends JavaPlugin {
     private Placeholder papiExpansion = null;
 
     private ImportData itd = null;
+
+    @Override
+    public void onLoad() {
+
+        Ezlib ezlib = new Ezlib(new File(this.getDataFolder(), "libs"));
+        ezlib.init();
+        ezlib.dependency("org.mariadb.jdbc:mariadb-java-client:3.5.0").parent(true).repository("https://maven.aliyun.com/repository/public/").load();
+    }
 
     @SuppressWarnings("ConstantConditions")
     public void onEnable() {

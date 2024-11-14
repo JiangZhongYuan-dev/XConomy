@@ -96,16 +96,14 @@ public class Placeholder extends PlaceholderExpansion {
                     int ii = Cache.baltop_papi.indexOf(username) + 1;
                     return Integer.toString(ii);
                 } else {
-                    return ChatColor.translateAlternateColorCodes('&',
-                            Objects.requireNonNull(MessagesManager.messageFile.getString("top_out"), "[XConomy] message.yml error"));
+                    return Objects.requireNonNull(MessagesManager.messageFile.getString("top_out"), "[XConomy] message.yml error");
                 }
             } else {
                 if (Cache.baltop_papi.contains(player.getName())) {
                     int ii = Cache.baltop_papi.indexOf(player.getName()) + 1;
                     return Integer.toString(ii);
                 } else {
-                    return ChatColor.translateAlternateColorCodes('&',
-                            Objects.requireNonNull(MessagesManager.messageFile.getString("top_out"), "[XConomy] message.yml error"));
+                    return Objects.requireNonNull(MessagesManager.messageFile.getString("top_out"), "[XConomy] message.yml error");
                 }
             }
         } else if (identifier.contains("top_balance_")) {

@@ -33,7 +33,7 @@ public class CommandPayToggle extends CommandCore{
     public static boolean onCommand(CSender sender, String[] args) {
         if (args.length == 0) {
             if (!sender.isPlayer()) {
-                sendMessages(sender, PREFIX + MessagesManager.systemMessage("§6控制台无法使用该指令"));
+                sendMessages(sender, PREFIX + MessagesManager.systemMessage("&6控制台无法使用该指令"));
                 return true;
             }
             if (sender.isOp() || sender.hasPermission("xconomy.user.paytoggle")) {
@@ -50,7 +50,7 @@ public class CommandPayToggle extends CommandCore{
         } else if (args.length == 1) {
             if (sender.isOp() || sender.hasPermission("xconomy.admin.paytoggle")) {
                 if (check()) {
-                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("§cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
+                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("&cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
                     return true;
                 }
                 PlayerData pd = DataCon.getPlayerData(args[0]);

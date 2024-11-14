@@ -1,5 +1,5 @@
 name: XConomy
-version: ${project.version}
+version: 2.27.0
 main: me.yic.xconomy.XConomy
 author: YiC
 website: https://www.spigotmc.org/resources/xconomy.75669/

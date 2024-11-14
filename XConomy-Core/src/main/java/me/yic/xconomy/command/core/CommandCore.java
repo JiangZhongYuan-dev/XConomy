@@ -52,13 +52,13 @@ public class CommandCore {
                     if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
                         MessagesManager.loadlangmess();
                         PREFIX = translateColorCodes("prefix");
-                        sendMessages(sender, PREFIX + MessagesManager.systemMessage("§amessage.yml重载成功"));
+                        sendMessages(sender, PREFIX + MessagesManager.systemMessage("&amessage.yml重载成功"));
                         return true;
                     }
                     if (args.length == 2 && args[0].equalsIgnoreCase("deldata")) {
 
                         if (check()) {
-                            sendMessages(sender, PREFIX + MessagesManager.systemMessage("§cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
+                            sendMessages(sender, PREFIX + MessagesManager.systemMessage("&cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
                             return true;
                         }
 
@@ -209,11 +209,11 @@ public class CommandCore {
     }
 
     public static void showVersion(CSender sender) {
-        sender.sendMessage(PREFIX + "§6XConomy §f(Version: "
-                + XConomy.PVersion + ") §6|§7 Author: §f" + MessagesManager.getAuthor());
+        sender.sendMessage(PREFIX + "&6XConomy &f(Version: "
+                + XConomy.PVersion + ") &6|&7 Author: &f" + MessagesManager.getAuthor());
         String trs = MessagesManager.getTranslatorS();
         if (trs != null) {
-            sender.sendMessage(PREFIX + "§7Translator (system): §f" + trs);
+            sender.sendMessage(PREFIX + "&7Translator (system): &f" + trs);
         }
     }
 

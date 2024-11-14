@@ -37,7 +37,7 @@ import java.util.UUID;
 public class CommandPay extends CommandCore{
     public static boolean onCommand(CSender sender, String commandName, String[] args) {
         if (!sender.isPlayer()) {
-            sendMessages(sender, PREFIX + MessagesManager.systemMessage("§6控制台无法使用该指令"));
+            sendMessages(sender, PREFIX + MessagesManager.systemMessage("&6控制台无法使用该指令"));
             return true;
         }
 

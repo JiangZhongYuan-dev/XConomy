@@ -3,6 +3,8 @@ package me.yic.xconomy.adapter.comp;
 
 import me.yic.xconomy.XConomy;
 import me.yic.xconomy.adapter.iPlayer;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -32,12 +34,16 @@ public class CPlayer implements iPlayer {
 
     @Override
     public void sendMessage(String message){
-        player.sendMessage(message);
+        player.sendMessage(MiniMessage.miniMessage().deserialize(message));
     }
 
     @Override
     public void sendMessage(String[] message){
-        player.sendMessage(message);
+        Component component = Component.empty();
+        for (String s : message) {
+            component = component.append(Component.text(s)).append(Component.newline());
+        }
+        player.sendMessage(component);
     }
 
     @Override

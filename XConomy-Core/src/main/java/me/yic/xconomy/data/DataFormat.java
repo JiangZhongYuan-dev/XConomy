@@ -87,15 +87,15 @@ public class DataFormat {
 
     public static String PEshownf(BigDecimal am) {
         if (am.compareTo(BigDecimal.ONE) == 0) {
-            return ChatColor.translateAlternateColorCodes('&', displayformat
+            return displayformat
                     .replace("%balance%", getformatbalance(am))
                     .replace("%format_balance%", getformatbalance(am))
-                    .replace("%currencyname%", singularname));
+                    .replace("%currencyname%", singularname);
         }
-        return ChatColor.translateAlternateColorCodes('&', displayformat
+        return displayformat
                 .replace("%balance%", getformatbalance(am))
                 .replace("%format_balance%", getformatbalance(am))
-                .replace("%currencyname%", pluralname));
+                .replace("%currencyname%", pluralname);
     }
 
     public static boolean isMAX(BigDecimal am) {

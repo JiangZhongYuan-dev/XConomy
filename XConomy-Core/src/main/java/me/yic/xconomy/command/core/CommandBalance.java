@@ -69,7 +69,7 @@ public class CommandBalance extends CommandCore{
         switch (commndlength) {
             case 0: {
                 if (!sender.isPlayer()) {
-                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("§6控制台无法使用该指令"));
+                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("&6控制台无法使用该指令"));
                     return true;
                 }
 
@@ -119,7 +119,7 @@ public class CommandBalance extends CommandCore{
                 }
 
                 if (check()) {
-                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("§cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
+                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("&cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
                     return true;
                 }
 
@@ -313,12 +313,12 @@ public class CommandBalance extends CommandCore{
                 }
 
                 if (XConomyLoad.Config.UUIDMODE.equals(UUIDMode.SEMIONLINE) && args[2].equalsIgnoreCase("online")) {
-                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("§c该指令不支持在半正版模式中使用"));
+                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("&c该指令不支持在半正版模式中使用"));
                     return true;
                 }
 
                 if (check()) {
-                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("§cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
+                    sendMessages(sender, PREFIX + MessagesManager.systemMessage("&cBC模式开启的情况下,无法在无人的服务器中使用OP命令"));
                     return true;
                 }
 

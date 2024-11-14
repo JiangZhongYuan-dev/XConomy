@@ -1,4 +1,4 @@
 name: XConomy
 main: me.yic.xconomy.XConomyBungee
-version: ${project.version}
+version: 2.27.0
 author: YiC
